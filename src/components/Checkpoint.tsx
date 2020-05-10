@@ -16,6 +16,7 @@ const Li = styled.li`
   & .checkpoint {
     background-color: #ddd;
     font-weight: bold;
+    font-size: 14px;
     width: ${(props) => props.theme.dotSize};
     height: ${(props) => props.theme.dotSize};
     align-items: center;
