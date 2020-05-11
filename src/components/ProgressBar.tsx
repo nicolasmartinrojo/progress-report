@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Checkpoint from "./Checkpoint";
 import styled from "styled-components";
+import Container from "./Container";
 
 type ProgressBarProps = {
   steps: number;
 };
 
 const Ul = styled.ul`
-  list-style-type: none;
   display: flex;
 `;
 const ProgressBar = ({ steps }: ProgressBarProps) => {
@@ -41,7 +41,9 @@ const ProgressBar = ({ steps }: ProgressBarProps) => {
 
   return (
     <>
-      <Ul>{checkpoints}</Ul>
+      <Container>
+        <Ul>{checkpoints}</Ul>
+      </Container>
       <button onClick={() => moveStep(activeStep - 1)}>Prev</button>
       <button onClick={() => moveStep(activeStep + 1)}>Next</button>
     </>
